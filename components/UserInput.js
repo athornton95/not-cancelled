@@ -7,7 +7,7 @@ class UserInput extends Component {
             city: '',
             state: '',
             minLength: '0',
-            maxLength: '0',
+            maxLength: '15',
             difficulty: ''
         }
     }
@@ -21,49 +21,46 @@ class UserInput extends Component {
         this.props.findGeoCode(this.state)
     }
     render(){
-        // console.log(this.state)
         return (
             <div>
-                <form onSubmit = {this.handleSubmit}>
+                <form onSubmit = {this.handleSubmit} >
                     <div>
-                        <input onChange = {this.handleChange} className = "formInput" placeholder = 'CITY' type = "text" name = "city"/>
+                        <input onChange = {this.handleChange} className = "formInput" placeholder = 'City' type = "text" name = "city"/>
                     </div>
                     <div>
-                        <input onChange = {this.handleChange} className = "formInput" placeholder = 'STATE' type = "text" name = "state"/>
+                        <input onChange = {this.handleChange} className = "formInput" placeholder = 'State' type = "text" name = "state"/>
                     </div>
                     <div>
                         <select onChange = {this.handleChange} className = "formInput select" value = {this.state.minLength}name = 'minLength'>
-                            <option value = '0'>MIN MILES</option>
-                            <option value = '1'>1 MILE</option>
-                            <option value = '10'>10 MILES</option>
-                            <option value = "15">15 MILES</option>
-                            <option value = "20">20 MILES</option>
+                            <option value = '0'>Min Miles</option>
+                            <option value = '1'>1 Miles</option>
+                            <option value = '5'>5 Miles</option>
+                            <option value = "10">10 Miles</option>
                         </select>
                     </div>
                     <div>
                         <select onChange = {this.handleChange} className = "formInput select" value = {this.state.maxLength} name = 'maxLength'>
-                            <option value = '0'>MAX MILES</option>
-                            <option value = '5'>5 MILES</option>
-                            <option value = '10'>10 MILES</option>
-                            <option value = "15">15 MILES</option>
-                            <option value = "20">20 MILES</option>
-                            <option value = "25">25 MILES</option>
-                            <option value = "30">30 MILES</option>
+                            <option value = '0'>Max Miles</option>
+                            <option value = '5'>5 Miles</option>
+                            <option value = '10'>10 Miles</option>
+                            <option value = "15">15 Miles</option>
+                            <option value = "20">20 Miles</option>
+                            <option value = "100">No Max</option>
                         </select>
                     </div>
                     <div>
                         <select onChange = {this.handleChange} className = "formInput select" value = {this.state.difficulty} name = 'difficulty'>
-                            <option value = ''>DIFFICULTY</option>
-                            <option value = 'green'>NOVICE</option>
-                            <option value = 'greenBlue'>PROFICIENT</option>
-                            <option value = "blue">STRENUOUS</option>
-                            <option value = "blueBlack">EXTREMELY STRENUOUS</option>
-                            <option value = "black">YOU'RE WILD</option>
-                            <option value = ''>ALL DIFFICULTIES</option>
+                            <option value = ''>Difficulty</option>
+                            <option value = 'green'>Novice</option>
+                            <option value = 'greenBlue'>Proficient</option>
+                            <option value = "blue">Strenuous</option>
+                            <option value = "blueBlack">Very strenuous</option>
+                            <option value = "black">You're Wild</option>
+                            <option value = ''>All Difficulties</option>
                         </select>
                     </div>
                     <div>
-                        <button type = "submit" className = "loginSubmit findTrails">FIND TRAILS</button>
+                        <button type = "submit" className = "loginSubmit findTrails">Find me trails</button>
                     </div>
                 </form>
             </div>

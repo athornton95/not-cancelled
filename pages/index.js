@@ -1,29 +1,16 @@
-import Trails from '../components/Trails'
-import UserInput from '../components/UserInput';
-import Link from 'next/link';
+import IntroPage from '../components/IntroPage';
+import Nav from '../components/Nav';
 
-export default function Index(props) {
-    console.log(props)
+export default function Index() {
     return(
-    <div>
-        <Trails />
-        <ul>
-        {/* {props.trails.map((trail) => (
-            <li key={trail.id}>
-                <Link href="/p/[id]" as={`/p/${trail.id}`}>
-                <Trails/>
-            </Link>
-            </li>
-        ))} */}
-        </ul>
+    <div className="body">
+        <Nav/>
+       <IntroPage />
+       <style jsx>{`
+            .body {
+                overflow-y: hidden;
+            }
+        `}</style>
     </div>
     )
 }
-
-// Index.getInitialProps = async function(props) {
-//     <Trails />
-
-//     return {
-//         trails: props.trails
-//     }
-// }

@@ -88,527 +88,149 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Trails.js":
-/*!******************************!*\
-  !*** ./components/Trails.js ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _UserInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserInput */ "./components/UserInput.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/alexandrathornton/Github/Outside/not-cancelled/components/Trails.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
- // import WeatherInfo from './WeatherInfo/WeatherInfo'
-
-class Trails extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor() {
-    super();
-
-    _defineProperty(this, "findGeoCode", async formData => {
-      try {
-        const searchURL = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=${formData.city},+${formData.state}&key=AIzaSyCxC93pv465QlIoGBJEWgafUpZwTJ_5tPg`;
-        const result = await fetch(searchURL);
-        const parsedResponse = await result.json();
-        console.log(`${parsedResponse} is the parsed response`);
-
-        if (result.status === 200) {
-          this.setState({
-            lat: parsedResponse.results[0].geometry.location.lat,
-            lng: parsedResponse.results[0].geometry.location.lng,
-            city: formData.city,
-            state: formData.state,
-            minLength: formData.minLength,
-            maxLength: formData.maxLength,
-            difficulty: formData.difficulty
-          });
-        }
-
-        console.log(this.state);
-        this.findTrails();
-      } catch (err) {
-        console.log(err);
-      }
-    });
-
-    _defineProperty(this, "findTrails", async () => {
-      console.log(this.state.maxLength);
-
-      try {
-        const searchURL = `https://www.hikingproject.com/data/get-trails?lat=${this.state.lat}&lon=${this.state.lng}&minLength=${this.state.minLength}&maxDistance=10&key=200465360-942e3fb792b81fa531e25b7484cbc0f9`;
-        const result = await fetch(searchURL);
-        const parsedResponse = await result.json();
-
-        if (result.status === 200) {
-          if (this.state.difficulty === '') {
-            this.setState({
-              trails: parsedResponse.trails.filter(trails => trails.length < this.state.maxLength)
-            });
-          } else {
-            this.setState({
-              trails: parsedResponse.trails.filter(trails => trails.length < this.state.maxLength && trails.difficulty === this.state.difficulty)
-            });
-          }
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    });
-
-    this.state = {
-      lat: '',
-      lng: '',
-      city: '',
-      state: '',
-      trails: [],
-      minLength: '',
-      maxLength: '',
-      difficulty: ''
-    };
-  }
-
-  render(formData) {
-    //     console.log(this.state.trails)
-    //     // console.log(formData)
-    //     console.log(this.state.lat, this.state.lng, 'IN TRAILS INFO')
-    const trailList = this.state.trails.map(trail => {
-      __jsx("li", {
-        key: trail.id,
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72,
-          columnNumber: 13
-        }
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        href: "/p/[id]",
-        as: `/p/${trail.id}`,
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73,
-          columnNumber: 17
-        }
-      }, __jsx("a", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 75,
-          columnNumber: 17
-        }
-      }, trail.name))); // return (
-      //     <div className = 'eachTrail'>
-      //         <div>
-      //              <h4>{trail.name}</h4> 
-      //         </div>
-      //          <div>
-      //             <p>{trail.location}</p> 
-      //          </div>
-      //         <div className = 'mainTrailInfo'>
-      //             <p>{trail.length} miles</p>
-      //          </div>
-      //         <div>
-      //             <p>peak elevation: {trail.high}</p>
-      //         </div>
-      //         <div>
-      //             <p>rating: {trail.stars} stars</p>
-      //         </div>
-      //         <div>
-      //             <p><a href = {trail.url} target="_blank">more info</a></p>
-      //         </div>
-      //     </div>
-      // )
-
-    }); // console.log('this is the lat', this.state.lat, this.state.lng)
-
-    return __jsx("div", {
-      className: "whatIsThisDiv",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 103,
-        columnNumber: 13
-      }
-    }, __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 104,
-        columnNumber: 17
-      }
-    }, __jsx("div", {
-      className: "userInput",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 105,
-        columnNumber: 21
-      }
-    }, __jsx(_UserInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      findGeoCode: this.findGeoCode,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 106,
-        columnNumber: 25
-      }
-    })), __jsx("div", {
-      className: "trailInfo",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 135,
-        columnNumber: 18
-      }
-    }, trailList)));
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Trails);
-
-/***/ }),
-
-/***/ "./components/UserInput.js":
+/***/ "./components/IntroPage.js":
 /*!*********************************!*\
-  !*** ./components/UserInput.js ***!
+  !*** ./components/IntroPage.js ***!
   \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/alexandrathornton/Github/Outside/not-cancelled/components/UserInput.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/alexandrathornton/Github/Outside/not-cancelled/components/IntroPage.js";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
+const IntroPage = () => {
+  return __jsx("div", {
+    className: "jsx-1775358572" + " " + "content-container",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "jsx-1775358572" + " " + "title-wrapper",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("h1", {
+    className: "jsx-1775358572" + " " + "title",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, "Yeah, quarantine sucks. ", __jsx("br", {
+    className: "jsx-1775358572",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 59
+    }
+  }), __jsx("span", {
+    className: "jsx-1775358572" + " " + "italic-large",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 64
+    }
+  }, "Big time."), " ", __jsx("br", {
+    className: "jsx-1775358572",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 112
+    }
+  }), "But that doesn't mean that there isn't fun to be had while we patiently wait for it to be over."), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/choice",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 13
+    }
+  }, __jsx("a", {
+    className: "jsx-1775358572" + " " + "global-button",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 17
+    }
+  }, "Right?"))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "1775358572",
+    __self: undefined
+  }, ".content-container.jsx-1775358572{height:100vh;background:linear-gradient(#e66465,#9198e5);position:relative;}.title-wrapper.jsx-1775358572{display:grid;margin:0 auto;width:60%;justify-items:center;text-align:center;position:absolute;left:50%;-webkit-transform:translate(-50%,50%);-ms-transform:translate(-50%,50%);transform:translate(-50%,50%);}.title.jsx-1775358572{color:white;opacity:1;font-size:2rem;}.italic-large.jsx-1775358572{font-style:italic;font-weight:500;font-size:5rem;line-height:1.1;}.global-button.jsx-1775358572{-webkit-text-decoration:none;text-decoration:none;padding:1rem 1.75rem;background-color:blue;color:white;border-radius:2rem;font-weight:700;box-shadow:1px 4px 8px darkBlue;}.global-button.jsx-1775358572:hover{background-color:darkBlue;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbGV4YW5kcmF0aG9ybnRvbi9HaXRodWIvT3V0c2lkZS9ub3QtY2FuY2VsbGVkL2NvbXBvbmVudHMvSW50cm9QYWdlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVdvQixBQUk4QixBQUtBLEFBVUQsQUFNTSxBQU9HLEFBU0ssWUFyQmhCLENBZm1DLEFBSy9CLEtBZ0JFLElBTEQsSUFxQm5CLENBL0JjLE9BZ0JLLEdBZk0sQUFVekIsWUFNb0IsQ0FLSyxPQTNCSCxDQU9BLE9BZ0J0QixNQUswQixJQTNCMUIsQ0FPc0IsaUJBcUJOLENBcEJILFNBQ3NCLEVBb0JiLG1CQUNGLGdCQUNnQixnQ0FDcEMsaUNBdEJBIiwiZmlsZSI6Ii9Vc2Vycy9hbGV4YW5kcmF0aG9ybnRvbi9HaXRodWIvT3V0c2lkZS9ub3QtY2FuY2VsbGVkL2NvbXBvbmVudHMvSW50cm9QYWdlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJztcblxuY29uc3QgSW50cm9QYWdlID0gKCkgPT4ge1xuICAgIHJldHVybihcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRlbnQtY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGl0bGUtd3JhcHBlclwiPlxuICAgICAgICAgICAgPGgxIGNsYXNzTmFtZT1cInRpdGxlXCI+WWVhaCwgcXVhcmFudGluZSBzdWNrcy4gPGJyLz48c3BhbiBjbGFzc05hbWU9XCJpdGFsaWMtbGFyZ2VcIj5CaWcgdGltZS48L3NwYW4+IDxici8+QnV0IHRoYXQgZG9lc24ndCBtZWFuIHRoYXQgdGhlcmUgaXNuJ3QgZnVuIHRvIGJlIGhhZCB3aGlsZSB3ZSBwYXRpZW50bHkgd2FpdCBmb3IgaXQgdG8gYmUgb3Zlci48L2gxPlxuICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9jaG9pY2VcIj5cbiAgICAgICAgICAgICAgICA8YSBjbGFzc05hbWU9XCJnbG9iYWwtYnV0dG9uXCI+UmlnaHQ/PC9hPlxuICAgICAgICAgICAgPC9MaW5rPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAgICAgLmNvbnRlbnQtY29udGFpbmVyIHtcbiAgICAgICAgICAgICAgICAvLyBtYXJnaW46IDAgMXJlbTtcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDEwMHZoO1xuICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgjZTY2NDY1LCAjOTE5OGU1KTtcbiAgICAgICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAudGl0bGUtd3JhcHBlciB7XG4gICAgICAgICAgICAgICAgZGlzcGxheTogZ3JpZDtcbiAgICAgICAgICAgICAgICBtYXJnaW46IDAgYXV0bztcbiAgICAgICAgICAgICAgICB3aWR0aDogNjAlO1xuICAgICAgICAgICAgICAgIGp1c3RpZnktaXRlbXM6IGNlbnRlcjtcbiAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgICAgICAgIGxlZnQ6IDUwJTtcbiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCA1MCUpO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLnRpdGxlIHtcbiAgICAgICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICAgICAgb3BhY2l0eTogMTtcbiAgICAgICAgICAgICAgICBmb250LXNpemU6IDJyZW07XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5pdGFsaWMtbGFyZ2Uge1xuICAgICAgICAgICAgICAgIGZvbnQtc3R5bGU6IGl0YWxpYztcbiAgICAgICAgICAgICAgICBmb250LXdlaWdodDogNTAwO1xuICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogNXJlbTtcbiAgICAgICAgICAgICAgICBsaW5lLWhlaWdodDogMS4xO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAuZ2xvYmFsLWJ1dHRvbiB7XG4gICAgICAgICAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgICAgICAgICAgICAgIHBhZGRpbmc6IDFyZW0gMS43NXJlbTtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibHVlO1xuICAgICAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICAgICAgICBib3JkZXItcmFkaXVzIDJyZW07XG4gICAgICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDcwMDtcbiAgICAgICAgICAgICAgICBib3gtc2hhZG93OiAxcHggNHB4IDhweCBkYXJrQmx1ZTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5nbG9iYWwtYnV0dG9uOmhvdmVyIHtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBkYXJrQmx1ZTtcbiAgICAgICAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gICAgPC9kaXY+XG4gICAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBJbnRyb1BhZ2UgXG5cbiJdfQ== */\n/*@ sourceURL=/Users/alexandrathornton/Github/Outside/not-cancelled/components/IntroPage.js */"));
+};
 
-class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor() {
-    super();
+/* harmony default export */ __webpack_exports__["default"] = (IntroPage);
 
-    _defineProperty(this, "handleChange", e => {
-      this.setState({
-        [e.target.name]: e.target.value
-      });
-    });
+/***/ }),
 
-    _defineProperty(this, "handleSubmit", e => {
-      e.preventDefault();
-      this.props.findGeoCode(this.state);
-    });
+/***/ "./components/Nav.js":
+/*!***************************!*\
+  !*** ./components/Nav.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-    this.state = {
-      city: '',
-      state: '',
-      minLength: '0',
-      maxLength: '0',
-      difficulty: ''
-    };
-  }
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/alexandrathornton/Github/Outside/not-cancelled/components/Nav.js";
 
-  render() {
-    // console.log(this.state)
-    return __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26,
-        columnNumber: 13
-      }
-    }, __jsx("form", {
-      onSubmit: this.handleSubmit,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27,
-        columnNumber: 17
-      }
-    }, __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 28,
-        columnNumber: 21
-      }
-    }, __jsx("input", {
-      onChange: this.handleChange,
-      className: "formInput",
-      placeholder: "CITY",
-      type: "text",
-      name: "city",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29,
-        columnNumber: 25
-      }
-    })), __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 31,
-        columnNumber: 21
-      }
-    }, __jsx("input", {
-      onChange: this.handleChange,
-      className: "formInput",
-      placeholder: "STATE",
-      type: "text",
-      name: "state",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 32,
-        columnNumber: 25
-      }
-    })), __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34,
-        columnNumber: 21
-      }
-    }, __jsx("select", {
-      onChange: this.handleChange,
-      className: "formInput select",
-      value: this.state.minLength,
-      name: "minLength",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 35,
-        columnNumber: 25
-      }
-    }, __jsx("option", {
-      value: "0",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 36,
-        columnNumber: 29
-      }
-    }, "MIN MILES"), __jsx("option", {
-      value: "1",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37,
-        columnNumber: 29
-      }
-    }, "1 MILE"), __jsx("option", {
-      value: "10",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 38,
-        columnNumber: 29
-      }
-    }, "10 MILES"), __jsx("option", {
-      value: "15",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 39,
-        columnNumber: 29
-      }
-    }, "15 MILES"), __jsx("option", {
-      value: "20",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40,
-        columnNumber: 29
-      }
-    }, "20 MILES"))), __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43,
-        columnNumber: 21
-      }
-    }, __jsx("select", {
-      onChange: this.handleChange,
-      className: "formInput select",
-      value: this.state.maxLength,
-      name: "maxLength",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44,
-        columnNumber: 25
-      }
-    }, __jsx("option", {
-      value: "0",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 45,
-        columnNumber: 29
-      }
-    }, "MAX MILES"), __jsx("option", {
-      value: "5",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46,
-        columnNumber: 29
-      }
-    }, "5 MILES"), __jsx("option", {
-      value: "10",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47,
-        columnNumber: 29
-      }
-    }, "10 MILES"), __jsx("option", {
-      value: "15",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 48,
-        columnNumber: 29
-      }
-    }, "15 MILES"), __jsx("option", {
-      value: "20",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 49,
-        columnNumber: 29
-      }
-    }, "20 MILES"), __jsx("option", {
-      value: "25",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 50,
-        columnNumber: 29
-      }
-    }, "25 MILES"), __jsx("option", {
-      value: "30",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51,
-        columnNumber: 29
-      }
-    }, "30 MILES"))), __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54,
-        columnNumber: 21
-      }
-    }, __jsx("select", {
-      onChange: this.handleChange,
-      className: "formInput select",
-      value: this.state.difficulty,
-      name: "difficulty",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55,
-        columnNumber: 25
-      }
-    }, __jsx("option", {
-      value: "",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 56,
-        columnNumber: 29
-      }
-    }, "DIFFICULTY"), __jsx("option", {
-      value: "green",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57,
-        columnNumber: 29
-      }
-    }, "NOVICE"), __jsx("option", {
-      value: "greenBlue",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58,
-        columnNumber: 29
-      }
-    }, "PROFICIENT"), __jsx("option", {
-      value: "blue",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59,
-        columnNumber: 29
-      }
-    }, "STRENUOUS"), __jsx("option", {
-      value: "blueBlack",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60,
-        columnNumber: 29
-      }
-    }, "EXTREMELY STRENUOUS"), __jsx("option", {
-      value: "black",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 61,
-        columnNumber: 29
-      }
-    }, "YOU'RE WILD"), __jsx("option", {
-      value: "",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62,
-        columnNumber: 29
-      }
-    }, "ALL DIFFICULTIES"))), __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65,
-        columnNumber: 21
-      }
-    }, __jsx("button", {
-      type: "submit",
-      className: "loginSubmit findTrails",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66,
-        columnNumber: 25
-      }
-    }, "FIND TRAILS"))));
-  }
 
-}
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
-/* harmony default export */ __webpack_exports__["default"] = (UserInput);
+const Nav = () => {
+  return __jsx("div", {
+    className: "jsx-1169730479" + " " + "header-wrapper",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3,
+      columnNumber: 5
+    }
+  }, __jsx("h2", {
+    className: "jsx-1169730479" + " " + "header-title",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 9
+    }
+  }, "#notcancelled"), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "1169730479",
+    __self: undefined
+  }, ".header-wrapper.jsx-1169730479{position:-webkit-sticky;position:sticky;background-color:blue;width:100vw;height:4rem;display:grid;padding:0 2rem;}.header-title.jsx-1169730479{color:white;opacity:.7;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbGV4YW5kcmF0aG9ybnRvbi9HaXRodWIvT3V0c2lkZS9ub3QtY2FuY2VsbGVkL2NvbXBvbmVudHMvTmF2LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUtvQixBQUdpQyxBQVFKLFlBQ0QsV0FHZixpQkFYMEIsc0JBQ1YsWUFDQSxZQUNDLGFBQ0UsZUFDbkIiLCJmaWxlIjoiL1VzZXJzL2FsZXhhbmRyYXRob3JudG9uL0dpdGh1Yi9PdXRzaWRlL25vdC1jYW5jZWxsZWQvY29tcG9uZW50cy9OYXYuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBOYXYgPSAoKSA9PiB7XG4gICAgcmV0dXJuKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwiaGVhZGVyLXdyYXBwZXJcIj5cbiAgICAgICAgPGgyIGNsYXNzTmFtZT1cImhlYWRlci10aXRsZVwiPiNub3RjYW5jZWxsZWQ8L2gyPlxuXG4gICAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgICAgIC5oZWFkZXItd3JhcHBlciB7XG4gICAgICAgICAgICAgICAgcG9zaXRpb246IHN0aWNreTtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibHVlO1xuICAgICAgICAgICAgICAgIHdpZHRoOiAxMDB2dztcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDRyZW07XG4gICAgICAgICAgICAgICAgZGlzcGxheTogZ3JpZDtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiAwIDJyZW07XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuaGVhZGVyLXRpdGxlIHtcbiAgICAgICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICAgICAgb3BhY2l0eTogLjc7XG5cbiAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgIH1cbiAgICAgICAgYH08L3N0eWxlPlxuICAgIDwvZGl2PlxuKTtcbn07XG4gIFxuZXhwb3J0IGRlZmF1bHQgTmF2OyJdfQ== */\n/*@ sourceURL=/Users/alexandrathornton/Github/Outside/not-cancelled/components/Nav.js */"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Nav);
 
 /***/ }),
 
@@ -2297,52 +1919,50 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Trails__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Trails */ "./components/Trails.js");
-/* harmony import */ var _components_UserInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/UserInput */ "./components/UserInput.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_IntroPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/IntroPage */ "./components/IntroPage.js");
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Nav */ "./components/Nav.js");
 var _jsxFileName = "/Users/alexandrathornton/Github/Outside/not-cancelled/pages/index.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-
-function Index(props) {
-  console.log(props);
+function Index() {
   return __jsx("div", {
+    className: "jsx-2330260454" + " " + "body",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 5
+    }
+  }, __jsx(_components_Nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 9
+    }
+  }), __jsx(_components_IntroPage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
-      columnNumber: 5
+      columnNumber: 8
     }
-  }, __jsx(_components_Trails__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 9
-    }
-  }), __jsx("ul", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 9
-    }
-  }));
-} // Index.getInitialProps = async function(props) {
-//     <Trails />
-//     return {
-//         trails: props.trails
-//     }
-// }
+  }), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "2330260454",
+    __self: this
+  }, ".body.jsx-2330260454{overflow-y:hidden;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbGV4YW5kcmF0aG9ybnRvbi9HaXRodWIvT3V0c2lkZS9ub3QtY2FuY2VsbGVkL3BhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVFtQixBQUdtQyxrQkFDdEIiLCJmaWxlIjoiL1VzZXJzL2FsZXhhbmRyYXRob3JudG9uL0dpdGh1Yi9PdXRzaWRlL25vdC1jYW5jZWxsZWQvcGFnZXMvaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgSW50cm9QYWdlIGZyb20gJy4uL2NvbXBvbmVudHMvSW50cm9QYWdlJztcbmltcG9ydCBOYXYgZnJvbSAnLi4vY29tcG9uZW50cy9OYXYnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBJbmRleCgpIHtcbiAgICByZXR1cm4oXG4gICAgPGRpdiBjbGFzc05hbWU9XCJib2R5XCI+XG4gICAgICAgIDxOYXYvPlxuICAgICAgIDxJbnRyb1BhZ2UgLz5cbiAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgICAuYm9keSB7XG4gICAgICAgICAgICAgICAgb3ZlcmZsb3cteTogaGlkZGVuO1xuICAgICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgPC9kaXY+XG4gICAgKVxufSJdfQ== */\n/*@ sourceURL=/Users/alexandrathornton/Github/Outside/not-cancelled/pages/index.js */"));
+}
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -2395,6 +2015,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "styled-jsx/style":
+/*!***********************************!*\
+  !*** external "styled-jsx/style" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-jsx/style");
 
 /***/ }),
 
