@@ -24,7 +24,7 @@ class UserInput extends Component {
         return (
             <div>
                 <form onSubmit = {this.handleSubmit} >
-                    <div>
+                    <div className="text-field">
                         <input onChange = {this.handleChange} className = "formInput" placeholder = 'City' type = "text" name = "city"/>
                     </div>
                     <div>
@@ -63,6 +63,15 @@ class UserInput extends Component {
                         <button type = "submit" className = "loginSubmit findTrails">Find me trails</button>
                     </div>
                 </form>
+                <style jsx>{`
+                    .formInput{
+                        border-color: #8f0222;
+                        padding: 5px 10px;
+                        margin: 5px;
+                        width: 37vh;
+                        font-size: 20px;
+                    }
+                `}</style>
             </div>
         )
     }

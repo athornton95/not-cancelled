@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { css, cx } from 'emotion';
+import { css, jsx } from '@emotion/core'
 
 const IntroPage = () => {
     const hoverColor = '#08009c';
@@ -48,7 +48,7 @@ const IntroPage = () => {
                 color: white;
                 border-radius 2rem;
                 font-weight: 700;
-                box-shadow: 1px 4px 8px darkBlue;
+                box-shadow: 1px 4px 8px #050066;
             }
             .global-button:hover {
                 background-color: ${hoverColor};

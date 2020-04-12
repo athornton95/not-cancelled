@@ -4,7 +4,7 @@ import Nav from '../components/Nav';
 export default function Index() {
     return(
     <div className="body">
-        <Nav/>
+        <Nav />
        <IntroPage />
        <style jsx>{`
             .body {

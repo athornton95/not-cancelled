@@ -14,9 +14,7 @@ const Nav = () => {
             }
             .header-title {
                 color: white;
-                opacity: .7;
-
-                
+                opacity: .7;  
             }
         `}</style>
     </div>

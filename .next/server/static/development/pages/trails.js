@@ -88,10 +88,55 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/Nav.js":
+/*!***************************!*\
+  !*** ./components/Nav.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/alexandrathornton/Github/Outside/not-cancelled/components/Nav.js";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+const Nav = () => {
+  return __jsx("div", {
+    className: "jsx-4130491917" + " " + "header-wrapper",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3,
+      columnNumber: 5
+    }
+  }, __jsx("h2", {
+    className: "jsx-4130491917" + " " + "header-title",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 9
+    }
+  }, "#notcancelled"), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "4130491917",
+    __self: undefined
+  }, ".header-wrapper.jsx-4130491917{position:-webkit-sticky;position:sticky;background-color:blue;width:100vw;height:4rem;display:grid;padding:0 2rem;}.header-title.jsx-4130491917{color:white;opacity:.7;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbGV4YW5kcmF0aG9ybnRvbi9HaXRodWIvT3V0c2lkZS9ub3QtY2FuY2VsbGVkL2NvbXBvbmVudHMvTmF2LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUtvQixBQUdpQyxBQVFKLFlBQ0QsV0FDZixpQkFUMEIsc0JBQ1YsWUFDQSxZQUNDLGFBQ0UsZUFDbkIiLCJmaWxlIjoiL1VzZXJzL2FsZXhhbmRyYXRob3JudG9uL0dpdGh1Yi9PdXRzaWRlL25vdC1jYW5jZWxsZWQvY29tcG9uZW50cy9OYXYuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBOYXYgPSAoKSA9PiB7XG4gICAgcmV0dXJuKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwiaGVhZGVyLXdyYXBwZXJcIj5cbiAgICAgICAgPGgyIGNsYXNzTmFtZT1cImhlYWRlci10aXRsZVwiPiNub3RjYW5jZWxsZWQ8L2gyPlxuXG4gICAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgICAgIC5oZWFkZXItd3JhcHBlciB7XG4gICAgICAgICAgICAgICAgcG9zaXRpb246IHN0aWNreTtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibHVlO1xuICAgICAgICAgICAgICAgIHdpZHRoOiAxMDB2dztcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDRyZW07XG4gICAgICAgICAgICAgICAgZGlzcGxheTogZ3JpZDtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiAwIDJyZW07XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuaGVhZGVyLXRpdGxlIHtcbiAgICAgICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICAgICAgb3BhY2l0eTogLjc7ICBcbiAgICAgICAgICAgIH1cbiAgICAgICAgYH08L3N0eWxlPlxuICAgIDwvZGl2PlxuKTtcbn07XG4gIFxuZXhwb3J0IGRlZmF1bHQgTmF2OyJdfQ== */\n/*@ sourceURL=/Users/alexandrathornton/Github/Outside/not-cancelled/components/Nav.js */"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Nav);
+
+/***/ }),
 
 /***/ "./components/TrailFinder.js":
 /*!***********************************!*\
@@ -276,16 +321,19 @@ class TrailFinder extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/alexandrathornton/Github/Outside/not-cancelled/components/UserInput.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
-class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+class UserInput extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   constructor() {
     super();
 
@@ -311,6 +359,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   render() {
     return __jsx("div", {
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -319,6 +368,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("form", {
       onSubmit: this.handleSubmit,
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -326,6 +376,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 17
       }
     }, __jsx("div", {
+      className: "jsx-712116397" + " " + "text-field",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -334,10 +385,10 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("input", {
       onChange: this.handleChange,
-      className: "formInput",
       placeholder: "City",
       type: "text",
       name: "city",
+      className: "jsx-712116397" + " " + "formInput",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -345,6 +396,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 25
       }
     })), __jsx("div", {
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -353,10 +405,10 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("input", {
       onChange: this.handleChange,
-      className: "formInput",
       placeholder: "State",
       type: "text",
       name: "state",
+      className: "jsx-712116397" + " " + "formInput",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -364,6 +416,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 25
       }
     })), __jsx("div", {
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -372,9 +425,9 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("select", {
       onChange: this.handleChange,
-      className: "formInput select",
       value: this.state.minLength,
       name: "minLength",
+      className: "jsx-712116397" + " " + "formInput select",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -383,6 +436,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("option", {
       value: "0",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -391,6 +445,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "Min Miles"), __jsx("option", {
       value: "1",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -399,6 +454,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "1 Miles"), __jsx("option", {
       value: "5",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -407,6 +463,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "5 Miles"), __jsx("option", {
       value: "10",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -414,6 +471,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 29
       }
     }, "10 Miles"))), __jsx("div", {
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -422,9 +480,9 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("select", {
       onChange: this.handleChange,
-      className: "formInput select",
       value: this.state.maxLength,
       name: "maxLength",
+      className: "jsx-712116397" + " " + "formInput select",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -433,6 +491,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("option", {
       value: "0",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -441,6 +500,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "Max Miles"), __jsx("option", {
       value: "5",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -449,6 +509,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "5 Miles"), __jsx("option", {
       value: "10",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -457,6 +518,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "10 Miles"), __jsx("option", {
       value: "15",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -465,6 +527,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "15 Miles"), __jsx("option", {
       value: "20",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -473,6 +536,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "20 Miles"), __jsx("option", {
       value: "100",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -480,6 +544,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 29
       }
     }, "No Max"))), __jsx("div", {
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -488,9 +553,9 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("select", {
       onChange: this.handleChange,
-      className: "formInput select",
       value: this.state.difficulty,
       name: "difficulty",
+      className: "jsx-712116397" + " " + "formInput select",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -499,6 +564,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("option", {
       value: "",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -507,6 +573,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "Difficulty"), __jsx("option", {
       value: "green",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -515,6 +582,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "Novice"), __jsx("option", {
       value: "greenBlue",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -523,6 +591,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "Proficient"), __jsx("option", {
       value: "blue",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -531,6 +600,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "Strenuous"), __jsx("option", {
       value: "blueBlack",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -539,6 +609,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "Very strenuous"), __jsx("option", {
       value: "black",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -547,6 +618,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "You're Wild"), __jsx("option", {
       value: "",
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -554,6 +626,7 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 29
       }
     }, "All Difficulties"))), __jsx("div", {
+      className: "jsx-712116397",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -562,14 +635,17 @@ class UserInput extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, __jsx("button", {
       type: "submit",
-      className: "loginSubmit findTrails",
+      className: "jsx-712116397" + " " + "loginSubmit findTrails",
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 63,
         columnNumber: 25
       }
-    }, "Find me trails"))));
+    }, "Find me trails"))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+      id: "712116397",
+      __self: this
+    }, ".formInput.jsx-712116397{border-color:#8f0222;padding:5px 10px;margin:5px;width:37vh;font-size:20px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbGV4YW5kcmF0aG9ybnRvbi9HaXRodWIvT3V0c2lkZS9ub3QtY2FuY2VsbGVkL2NvbXBvbmVudHMvVXNlcklucHV0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWlFNEIsQUFHOEMscUJBQ0osaUJBQ04sV0FDQSxXQUNJLGVBQ25CIiwiZmlsZSI6Ii9Vc2Vycy9hbGV4YW5kcmF0aG9ybnRvbi9HaXRodWIvT3V0c2lkZS9ub3QtY2FuY2VsbGVkL2NvbXBvbmVudHMvVXNlcklucHV0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7Q29tcG9uZW50fSBmcm9tICdyZWFjdCc7XG5cbmNsYXNzIFVzZXJJbnB1dCBleHRlbmRzIENvbXBvbmVudCB7XG4gICAgY29uc3RydWN0b3IoKXtcbiAgICAgICAgc3VwZXIoKTtcbiAgICAgICAgdGhpcy5zdGF0ZSA9IHtcbiAgICAgICAgICAgIGNpdHk6ICcnLFxuICAgICAgICAgICAgc3RhdGU6ICcnLFxuICAgICAgICAgICAgbWluTGVuZ3RoOiAnMCcsXG4gICAgICAgICAgICBtYXhMZW5ndGg6ICcxNScsXG4gICAgICAgICAgICBkaWZmaWN1bHR5OiAnJ1xuICAgICAgICB9XG4gICAgfVxuICAgIGhhbmRsZUNoYW5nZSA9IChlKSA9PiB7XG4gICAgICAgIHRoaXMuc2V0U3RhdGUoe1xuICAgICAgICAgICAgW2UudGFyZ2V0Lm5hbWVdOiBlLnRhcmdldC52YWx1ZVxuICAgICAgICB9KVxuICAgIH1cbiAgICBoYW5kbGVTdWJtaXQgPSAoZSkgPT4ge1xuICAgICAgICBlLnByZXZlbnREZWZhdWx0KCk7XG4gICAgICAgIHRoaXMucHJvcHMuZmluZEdlb0NvZGUodGhpcy5zdGF0ZSlcbiAgICB9XG4gICAgcmVuZGVyKCl7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIDxmb3JtIG9uU3VibWl0ID0ge3RoaXMuaGFuZGxlU3VibWl0fSA+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1maWVsZFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGlucHV0IG9uQ2hhbmdlID0ge3RoaXMuaGFuZGxlQ2hhbmdlfSBjbGFzc05hbWUgPSBcImZvcm1JbnB1dFwiIHBsYWNlaG9sZGVyID0gJ0NpdHknIHR5cGUgPSBcInRleHRcIiBuYW1lID0gXCJjaXR5XCIvPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxpbnB1dCBvbkNoYW5nZSA9IHt0aGlzLmhhbmRsZUNoYW5nZX0gY2xhc3NOYW1lID0gXCJmb3JtSW5wdXRcIiBwbGFjZWhvbGRlciA9ICdTdGF0ZScgdHlwZSA9IFwidGV4dFwiIG5hbWUgPSBcInN0YXRlXCIvPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxzZWxlY3Qgb25DaGFuZ2UgPSB7dGhpcy5oYW5kbGVDaGFuZ2V9IGNsYXNzTmFtZSA9IFwiZm9ybUlucHV0IHNlbGVjdFwiIHZhbHVlID0ge3RoaXMuc3RhdGUubWluTGVuZ3RofW5hbWUgPSAnbWluTGVuZ3RoJz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlID0gJzAnPk1pbiBNaWxlczwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWUgPSAnMSc+MSBNaWxlczwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWUgPSAnNSc+NSBNaWxlczwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWUgPSBcIjEwXCI+MTAgTWlsZXM8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvc2VsZWN0PlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxzZWxlY3Qgb25DaGFuZ2UgPSB7dGhpcy5oYW5kbGVDaGFuZ2V9IGNsYXNzTmFtZSA9IFwiZm9ybUlucHV0IHNlbGVjdFwiIHZhbHVlID0ge3RoaXMuc3RhdGUubWF4TGVuZ3RofSBuYW1lID0gJ21heExlbmd0aCc+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZSA9ICcwJz5NYXggTWlsZXM8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlID0gJzUnPjUgTWlsZXM8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlID0gJzEwJz4xMCBNaWxlczwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWUgPSBcIjE1XCI+MTUgTWlsZXM8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlID0gXCIyMFwiPjIwIE1pbGVzPC9vcHRpb24+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZSA9IFwiMTAwXCI+Tm8gTWF4PC9vcHRpb24+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L3NlbGVjdD5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8c2VsZWN0IG9uQ2hhbmdlID0ge3RoaXMuaGFuZGxlQ2hhbmdlfSBjbGFzc05hbWUgPSBcImZvcm1JbnB1dCBzZWxlY3RcIiB2YWx1ZSA9IHt0aGlzLnN0YXRlLmRpZmZpY3VsdHl9IG5hbWUgPSAnZGlmZmljdWx0eSc+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZSA9ICcnPkRpZmZpY3VsdHk8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlID0gJ2dyZWVuJz5Ob3ZpY2U8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlID0gJ2dyZWVuQmx1ZSc+UHJvZmljaWVudDwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWUgPSBcImJsdWVcIj5TdHJlbnVvdXM8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlID0gXCJibHVlQmxhY2tcIj5WZXJ5IHN0cmVudW91czwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWUgPSBcImJsYWNrXCI+WW91J3JlIFdpbGQ8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlID0gJyc+QWxsIERpZmZpY3VsdGllczwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9zZWxlY3Q+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiB0eXBlID0gXCJzdWJtaXRcIiBjbGFzc05hbWUgPSBcImxvZ2luU3VibWl0IGZpbmRUcmFpbHNcIj5GaW5kIG1lIHRyYWlsczwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Zvcm0+XG4gICAgICAgICAgICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAgICAgICAgICAgICAuZm9ybUlucHV0e1xuICAgICAgICAgICAgICAgICAgICAgICAgYm9yZGVyLWNvbG9yOiAjOGYwMjIyO1xuICAgICAgICAgICAgICAgICAgICAgICAgcGFkZGluZzogNXB4IDEwcHg7XG4gICAgICAgICAgICAgICAgICAgICAgICBtYXJnaW46IDVweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIHdpZHRoOiAzN3ZoO1xuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4O1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgYH08L3N0eWxlPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgIClcbiAgICB9XG59XG5cblxuZXhwb3J0IGRlZmF1bHQgVXNlcklucHV0OyJdfQ== */\n/*@ sourceURL=/Users/alexandrathornton/Github/Outside/not-cancelled/components/UserInput.js */"));
   }
 
 }
@@ -2262,46 +2338,60 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_TrailFinder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TrailFinder */ "./components/TrailFinder.js");
-/* harmony import */ var _components_UserInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/UserInput */ "./components/UserInput.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_TrailFinder__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/TrailFinder */ "./components/TrailFinder.js");
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Nav */ "./components/Nav.js");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/core */ "@emotion/core");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_emotion_core__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/alexandrathornton/Github/Outside/not-cancelled/pages/trails.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
- // export default function Trails(props) {
-//     console.log(`${props.trails} is props in Trails`)
-//     return(
-//     <div>
-//         <Trails />
-//     </div>
-//     )
-// }
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
 
 const Trails = () => {
+  const hoverColor = '#08009c';
   return __jsx("div", {
+    className: styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a.dynamic([["3622812002", [hoverColor]]]) + " " + "content-container",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 8,
       columnNumber: 9
     }
-  }, __jsx(_components_TrailFinder__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_components_Nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 9,
       columnNumber: 13
     }
-  }));
+  }), __jsx(_components_TrailFinder__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 13
+    }
+  }), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "3622812002",
+    dynamic: [hoverColor],
+    __self: undefined
+  }, `li.__jsx-style-dynamic-selector{list-style:none;display:block;}.content-container.__jsx-style-dynamic-selector{height:100vh;background:linear-gradient(#e66465,#9198e5);position:relative;}.title-wrapper.__jsx-style-dynamic-selector{display:grid;margin:0 auto;width:70%;justify-items:center;text-align:center;position:absolute;left:50%;top:-15%;-webkit-transform:translate(-50%,50%);-ms-transform:translate(-50%,50%);transform:translate(-50%,50%);}.title.__jsx-style-dynamic-selector{color:white;opacity:1;font-size:2rem;text-shadow:2px 2px #e66465;}.subtitle.__jsx-style-dynamic-selector{color:white;font-size:1.5rem;opacity:.7;font-style:italic;}.list-container.__jsx-style-dynamic-selector{display:grid;grid-template-columns:repeat(5,1fr);grid-column-gap:1rem;width:100%;}.list-item.__jsx-style-dynamic-selector{margin:2rem 0;}.button-wrapper.__jsx-style-dynamic-selector{margin-top:1rem;}.global-button.__jsx-style-dynamic-selector{-webkit-text-decoration:none;text-decoration:none;padding:1rem 1.75rem;background-color:blue;color:white;border-radius:2rem;font-weight:700;box-shadow:1px 4px 8px #050066;margin:1rem 1rem;}.global-button.__jsx-style-dynamic-selector:hover{background-color:${hoverColor};}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbGV4YW5kcmF0aG9ybnRvbi9HaXRodWIvT3V0c2lkZS9ub3QtY2FuY2VsbGVkL3BhZ2VzL3RyYWlscy5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFXd0IsQUFHaUMsQUFJSCxBQUtBLEFBV0QsQUFPQSxBQU1DLEFBT0MsQUFJRSxBQUdLLEFBVXlCLFlBcENwQyxBQU9PLENBdkI0QixBQUsvQixBQXdCc0IsQ0FPeEMsRUF4Q2tCLEFBNENsQixNQXZCbUIsS0FYTCxFQWtCQyxDQTNCZixPQVV5QixBQVdPLEdBT1YsTUE0QnRCLEdBdkJ5QixDQWFBLE9BMUNILENBT0EsQUFrQnRCLE9BUEEsS0FZZSxDQWFXLElBMUMxQixDQU9zQixLQXVCdEIsWUFhZ0IsQ0FuQ0gsU0FDQSxFQW1DUyxPQWxDYSxZQW1DZixnQkFDZSwrQkFDZCxpQkFDckIsMEJBckNBIiwiZmlsZSI6Ii9Vc2Vycy9hbGV4YW5kcmF0aG9ybnRvbi9HaXRodWIvT3V0c2lkZS9ub3QtY2FuY2VsbGVkL3BhZ2VzL3RyYWlscy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBUcmFpbEZpbmRlciBmcm9tICcuLi9jb21wb25lbnRzL1RyYWlsRmluZGVyJztcbmltcG9ydCBOYXYgZnJvbSAnLi4vY29tcG9uZW50cy9OYXYnO1xuaW1wb3J0IHsgY3NzLCBqc3ggfSBmcm9tICdAZW1vdGlvbi9jb3JlJ1xuXG5jb25zdCBUcmFpbHMgPSAoKSA9PiB7XG4gICAgY29uc3QgaG92ZXJDb2xvciA9ICcjMDgwMDljJztcbiAgICByZXR1cm4oXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGVudC1jb250YWluZXJcIj5cbiAgICAgICAgICAgIDxOYXYvPlxuICAgICAgICAgICAgPFRyYWlsRmluZGVyIC8+XG5cbiAgICAgICAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgICAgIGxpIHtcbiAgICAgICAgICAgICAgICBsaXN0LXN0eWxlOiBub25lO1xuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLmNvbnRlbnQtY29udGFpbmVyIHtcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDEwMHZoO1xuICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgjZTY2NDY1LCAjOTE5OGU1KTtcbiAgICAgICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAudGl0bGUtd3JhcHBlciB7XG4gICAgICAgICAgICAgICAgZGlzcGxheTogZ3JpZDtcbiAgICAgICAgICAgICAgICBtYXJnaW46IDAgYXV0bztcbiAgICAgICAgICAgICAgICB3aWR0aDogNzAlO1xuICAgICAgICAgICAgICAgIGp1c3RpZnktaXRlbXM6IGNlbnRlcjtcbiAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgICAgICAgIGxlZnQ6IDUwJTtcbiAgICAgICAgICAgICAgICB0b3A6IC0xNSU7XG4gICAgICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgNTAlKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC50aXRsZSB7XG4gICAgICAgICAgICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgICAgICAgICAgIG9wYWNpdHk6IDE7XG4gICAgICAgICAgICAgICAgZm9udC1zaXplOiAycmVtO1xuICAgICAgICAgICAgICAgIHRleHQtc2hhZG93OiAycHggMnB4ICNlNjY0NjU7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5zdWJ0aXRsZSB7XG4gICAgICAgICAgICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMS41cmVtO1xuICAgICAgICAgICAgICAgIG9wYWNpdHk6IC43O1xuICAgICAgICAgICAgICAgIGZvbnQtc3R5bGU6IGl0YWxpYztcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5saXN0LWNvbnRhaW5lciB7XG4gICAgICAgICAgICAgICAgZGlzcGxheTogZ3JpZDtcbiAgICAgICAgICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6cmVwZWF0KDUsIDFmcik7XG4gICAgICAgICAgICAgICAgZ3JpZC1jb2x1bW4tZ2FwOiAxcmVtO1xuICAgICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAubGlzdC1pdGVtIHtcbiAgICAgICAgICAgICAgICBtYXJnaW46IDJyZW0gMDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmJ1dHRvbi13cmFwcGVyIHtcbiAgICAgICAgICAgICAgICBtYXJnaW4tdG9wOiAxcmVtO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLmdsb2JhbC1idXR0b24ge1xuICAgICAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiAxcmVtIDEuNzVyZW07XG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogYmx1ZTtcbiAgICAgICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICAgICAgYm9yZGVyLXJhZGl1cyAycmVtO1xuICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7XG4gICAgICAgICAgICAgICAgYm94LXNoYWRvdzogMXB4IDRweCA4cHggIzA1MDA2NjtcbiAgICAgICAgICAgICAgICBtYXJnaW46IDFyZW0gMXJlbTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5nbG9iYWwtYnV0dG9uOmhvdmVyIHtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAke2hvdmVyQ29sb3J9O1xuICAgICAgICAgICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIClcbn1cblxuZXhwb3J0IGRlZmF1bHQgVHJhaWxzO1xuXG5cbiJdfQ== */
+/*@ sourceURL=/Users/alexandrathornton/Github/Outside/not-cancelled/pages/trails.js */`));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Trails); // Index.getInitialProps = async function(props) {
+/* harmony default export */ __webpack_exports__["default"] = (Trails);
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!*******************************!*\
   !*** multi ./pages/trails.js ***!
   \*******************************/
@@ -2310,6 +2400,17 @@ const Trails = () => {
 
 module.exports = __webpack_require__(/*! /Users/alexandrathornton/Github/Outside/not-cancelled/pages/trails.js */"./pages/trails.js");
 
+
+/***/ }),
+
+/***/ "@emotion/core":
+/*!********************************!*\
+  !*** external "@emotion/core" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@emotion/core");
 
 /***/ }),
 
@@ -2354,6 +2455,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "styled-jsx/style":
+/*!***********************************!*\
+  !*** external "styled-jsx/style" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-jsx/style");
 
 /***/ }),
 

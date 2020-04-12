@@ -1,14 +1,12 @@
 import Link from 'next/link';
+import Nav from '../components/Nav';
+import ChoicePage from '../components/ChoicePage';
 
 const Choice = () => {
     return (
         <div>
-        <Link href="/movies">
-            <a>Watch a Movie</a>
-        </Link>
-        <Link href="/trails">
-            <a>Go for a Hike</a>
-        </Link>
+            <Nav/>
+            <ChoicePage/>
         </div>
     )
 }
