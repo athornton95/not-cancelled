@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { css, jsx } from '@emotion/core';
 
 class UserInput extends Component {
     constructor(){
@@ -21,8 +22,9 @@ class UserInput extends Component {
         this.props.findGeoCode(this.state)
     }
     render(){
+        const hoverColor = '#08009c';
         return (
-            <div>
+            <div className="user-input-form">
                 <form onSubmit = {this.handleSubmit} >
                     <div className="text-field">
                         <input onChange = {this.handleChange} className = "formInput" placeholder = 'City' type = "text" name = "city"/>
@@ -60,16 +62,37 @@ class UserInput extends Component {
                         </select>
                     </div>
                     <div>
-                        <button type = "submit" className = "loginSubmit findTrails">Find me trails</button>
+                        <button type = "submit" className = "global-button">Find me trails</button>
                     </div>
                 </form>
                 <style jsx>{`
                     .formInput{
-                        border-color: #8f0222;
+                        border-color: blue;
                         padding: 5px 10px;
                         margin: 5px;
                         width: 37vh;
                         font-size: 20px;
+                    }
+                    .select {
+                        padding: 5px 10px;
+                    }
+                    .global-button {
+                        text-decoration: none;
+                        padding: 1rem 1.75rem;
+                        background-color: blue;
+                        color: white;
+                        border-radius 2rem;
+                        font-weight: 700;
+                        box-shadow: 1px 4px 8px #050066;
+                        margin: 1rem 1rem;
+                        border: none;
+                        font-size: .8rem;
+                    }
+                    .global-button:hover {
+                        background-color: ${hoverColor};
+                    }
+                    textarea:focus, input:focus{
+                        outline: none;
                     }
                 `}</style>
             </div>

@@ -7,27 +7,37 @@ const Trails = () => {
     return(
         <div className="content-container">
             <Nav/>
-            <TrailFinder />
-
+            <div className="wrapper">
+                <div className="title-wrapper">
+                    <h1 className="title">Get outside and take a hike!</h1>
+                    <p className="subtitle">Enter your location and hike style preferences to get inspired!</p>
+                </div>
+                <TrailFinder />
+            </div>
             <style jsx>{`
             li {
                 list-style: none;
                 display: block;
             }
+            .wrapper {
+                display: grid;
+                max-width: 100%;
+                margin: 2rem;
+            }
             .content-container {
-                height: 100vh;
+                min-height: 100vh;
                 background: linear-gradient(#e66465, #9198e5);
                 position: relative;
             }
             .title-wrapper {
                 display: grid;
                 margin: 0 auto;
+                margin-top: -5rem;
                 width: 70%;
                 justify-items: center;
                 text-align: center;
                 position: absolute;
                 left: 50%;
-                top: -15%;
                 transform: translate(-50%, 50%);
             }
             .title {

@@ -70,24 +70,63 @@ class TrailFinder extends Component {
         const trailList = this.state.trails.map((trail) => {
             return (
                 <div>
-                   <div key="trail.id" className="eachTrail">
-                        <h4>{trail.name}</h4> 
+                   <div key="trail.id" className="card">
+                   <div className="card-content">
+                        <h2>{trail.name}</h2> 
                         <p>{trail.location}</p> 
+                        <p>Length: {trail.length} miles</p>
+                        <p>{trail.summary}</p>
+                        <p>Current conditions: {trail.conditionDetails} | Last updated: {trail.conditionDate}</p>
+                    </div>
                      </div>
+                     <style jsx>{`
+                        h2 {
+                            border-bottom: 1px solid;
+                        }
+                        .card {
+                            background-color: white;
+                            width: 100%;
+                            border-radius: 1rem;
+                            box-shadow: 1px 4px 8px #050066;
+                            padding: .25rem;
+                            min-height: 18rem;
+                        }
+                        .card-content {
+                            margin: 2rem;
+                            text-align: left;
+                        }
+                    `}</style>
                 </div>
             )
         })
-    // console.log(`${trailList} trailLIST`);
         return(
-            <div className = 'userInput-Wrapper'>
-                <div>
+            <div className="trail-container">
+                <div className="trail-info-wrapper">
                     <div className = 'userInput'>
                         <UserInput findGeoCode = {this.findGeoCode} findTrails={this.findTrails}/>
                     </div>
-                    <div className = 'trailList'>
+                    <div className = 'trail-list'>
                         { trailList }
                     </div>
                 </div>
+                <style jsx>{`
+                    .trail-container {
+                        display: grid;
+                    }
+
+                    .trail-list {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-column-gap: 1.5rem;
+                        grid-row-gap: 1.5rem;
+                        margin-top: 1rem;
+                    }
+
+                    .trail-info-wrapper {
+                        text-align: center;
+                        margin-top: 10rem;
+                    }
+                `}</style>
             </div>
         )
     }
