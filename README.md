@@ -11,7 +11,7 @@ I would love to expand past these two activies, and plan on doing so!
 But for now, watch a movie or take a hike because both of those activies are #notcancelled. 
 
 Tech used:
-React
-Next.js
-Material UI (for theme)
+React,
+Next.js,
+Material UI (for theme),
 Emotion (kind of, will be used more)
