@@ -2,7 +2,7 @@ import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import { css, jsx } from '@emotion/core'
 import Nav from '../components/Nav';
-import theme from '../pages/theme';
+import theme from './theme';
 
 const Movies = (props) => {
     const hoverColor = '#08009c';

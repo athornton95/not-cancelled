@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import UserInput from './UserInput';
-import Link from 'next/link'
-// import WeatherInfo from './WeatherInfo/WeatherInfo'
 
 
 class TrailFinder extends Component {
