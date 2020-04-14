@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { css, jsx } from '@emotion/core'
-import theme from '../pages/theme';
+import theme from '../theme/theme';
 
 const IntroPage = () => {
     const hoverColor = '#08009c';

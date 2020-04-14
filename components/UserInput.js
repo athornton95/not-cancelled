@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { css, jsx } from '@emotion/core';
-import theme from '../pages/theme';
+import theme from '../theme/theme';
 
 class UserInput extends Component {
     constructor(){

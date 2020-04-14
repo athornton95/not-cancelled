@@ -1,7 +1,7 @@
 import TrailFinder from '../components/TrailFinder';
 import Nav from '../components/Nav';
 import { css, jsx } from '@emotion/core'
-import theme from './theme';
+import theme from '../theme/theme';
 
 const Trails = () => {
     const hoverColor = '#08009c';
