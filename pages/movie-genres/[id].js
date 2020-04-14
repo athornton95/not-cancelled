@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-unfetch';
-import theme from '../pages/theme';
+import theme from '../theme';
 import { css, jsx } from '@emotion/core';
 import Nav from '../../components/Nav';
 
