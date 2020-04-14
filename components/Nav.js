@@ -1,3 +1,5 @@
+import theme from '../pages/theme';
+
 const Nav = () => {
     return(
     <div className="header-wrapper">
@@ -6,7 +8,7 @@ const Nav = () => {
         <style jsx>{`
             .header-wrapper {
                 position: sticky;
-                background-color: blue;
+                background-color: ${theme.palette.primary.main};
                 width: 100vw;
                 height: 4rem;
                 display: grid;

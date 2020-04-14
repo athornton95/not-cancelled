@@ -1,6 +1,7 @@
 import TrailFinder from '../components/TrailFinder';
 import Nav from '../components/Nav';
 import { css, jsx } from '@emotion/core'
+import theme from './theme';
 
 const Trails = () => {
     const hoverColor = '#08009c';
@@ -70,7 +71,7 @@ const Trails = () => {
             .global-button {
                 text-decoration: none;
                 padding: 1rem 1.75rem;
-                background-color: blue;
+                background-color: ${theme.palette.primary.main};
                 color: white;
                 border-radius 2rem;
                 font-weight: 700;

@@ -71,18 +71,23 @@ class TrailFinder extends Component {
             return (
                 <div>
                    <div key="trail.id" className="card">
-                   <div className="card-content">
+                   <a href={trail.url} target="_blank"><div className="card-content">
                         <h2>{trail.name}</h2> 
                         <p>{trail.location}</p> 
                         <p>Length: {trail.length} miles</p>
                         <p>{trail.summary}</p>
                         <p>Current conditions: {trail.conditionDetails} | Last updated: {trail.conditionDate}</p>
-                    </div>
+                    </div></a>
                      </div>
                      <style jsx>{`
                         h2 {
                             border-bottom: 1px solid;
                         }
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                        
                         .card {
                             background-color: white;
                             width: 100%;
@@ -94,6 +99,10 @@ class TrailFinder extends Component {
                         .card-content {
                             margin: 2rem;
                             text-align: left;
+                        }
+
+                        .card:hover {
+                            transform: translateY(-3px);
                         }
                     `}</style>
                 </div>

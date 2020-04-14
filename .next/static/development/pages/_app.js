@@ -14544,7 +14544,7 @@ __webpack_require__.r(__webpack_exports__);
 var theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["createMuiTheme"])({
   palette: {
     primary: {
-      main: '#556cd6'
+      main: '#0000ff'
     },
     secondary: {
       main: '#19857b'

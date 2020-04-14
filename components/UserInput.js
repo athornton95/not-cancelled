@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { css, jsx } from '@emotion/core';
+import theme from '../pages/theme';
 
 class UserInput extends Component {
     constructor(){
@@ -7,8 +8,8 @@ class UserInput extends Component {
         this.state = {
             city: '',
             state: '',
-            minLength: '0',
-            maxLength: '15',
+            minLength: '',
+            maxLength: '',
             difficulty: ''
         }
     }
@@ -42,7 +43,7 @@ class UserInput extends Component {
                     </div>
                     <div>
                         <select onChange = {this.handleChange} className = "formInput select" value = {this.state.maxLength} name = 'maxLength'>
-                            <option value = '0'>Max Miles</option>
+                            <option value = ''>Max Miles</option>
                             <option value = '5'>5 Miles</option>
                             <option value = '10'>10 Miles</option>
                             <option value = "15">15 Miles</option>
@@ -67,7 +68,7 @@ class UserInput extends Component {
                 </form>
                 <style jsx>{`
                     .formInput{
-                        border-color: blue;
+                        border-color: ${theme.palette.primary.main};
                         padding: 5px 10px;
                         margin: 5px;
                         width: 37vh;
@@ -79,7 +80,7 @@ class UserInput extends Component {
                     .global-button {
                         text-decoration: none;
                         padding: 1rem 1.75rem;
-                        background-color: blue;
+                        background-color: ${theme.palette.primary.main};
                         color: white;
                         border-radius 2rem;
                         font-weight: 700;

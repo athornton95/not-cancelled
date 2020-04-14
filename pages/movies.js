@@ -2,6 +2,7 @@ import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import { css, jsx } from '@emotion/core'
 import Nav from '../components/Nav';
+import theme from '../pages/theme';
 
 const Movies = (props) => {
     const hoverColor = '#08009c';
@@ -72,7 +73,7 @@ const Movies = (props) => {
             .global-button {
                 text-decoration: none;
                 padding: 1rem 1.75rem;
-                background-color: blue;
+                background-color: ${theme.palette.primary.main};
                 color: white;
                 border-radius 2rem;
                 font-weight: 700;

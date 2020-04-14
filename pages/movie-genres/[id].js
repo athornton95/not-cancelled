@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-unfetch';
+import theme from '../pages/theme';
 import { css, jsx } from '@emotion/core';
 import Nav from '../../components/Nav';
 
@@ -99,7 +100,7 @@ const Movie = props => {
             .global-button {
                 text-decoration: none;
                 padding: 1rem 1.75rem;
-                background-color: blue;
+                background-color: ${theme.palette.primary.main};
                 color: white;
                 border-radius 2rem;
                 font-weight: 700;

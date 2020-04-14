@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { css, jsx } from '@emotion/core'
+import theme from '../pages/theme';
 
 const IntroPage = () => {
     const hoverColor = '#08009c';
@@ -13,7 +14,6 @@ const IntroPage = () => {
         </div>
         <style jsx>{`
             .content-container {
-                // margin: 0 1rem;
                 height: 100vh;
                 background: linear-gradient(#e66465, #9198e5);
                 position: relative;
@@ -44,7 +44,7 @@ const IntroPage = () => {
             .global-button {
                 text-decoration: none;
                 padding: 1rem 1.75rem;
-                background-color: blue;
+                background-color: ${theme.palette.primary.main};
                 color: white;
                 border-radius 2rem;
                 font-weight: 700;
