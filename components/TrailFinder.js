@@ -19,7 +19,7 @@ class TrailFinder extends Component {
 
     findGeoCode = async (formData) => {
         try{
-        const searchURL = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=${formData.city},+${formData.state}&key=AIzaSyCxC93pv465QlIoGBJEWgafUpZwTJ_5tPg`
+        const searchURL = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=${formData.city},+${formData.state}&key=AIzaSyAHhKGOfTAvy-VlwP5IryEgZCzTS5WMH48`
         const result = await fetch(searchURL)
         const parsedResponse = await result.json();
         // console.log(`${parsedResponse} is the parsed response for findGeoCode`);
@@ -43,7 +43,7 @@ class TrailFinder extends Component {
     findTrails = async () => {
         console.log(this.state.maxLength)
         try{
-        const searchURL = `https://www.hikingproject.com/data/get-trails?lat=${this.state.lat}&lon=${this.state.lng}&minLength=${this.state.minLength}&maxDistance=${this.state.maxLength}&key=200465360-942e3fb792b81fa531e25b7484cbc0f9`
+        const searchURL = `https://www.hikingproject.com/data/get-trails?lat=${this.state.lat}&lon=${this.state.lng}&minLength=${this.state.minLength}&maxDistance=${this.state.maxLength}&key=200727642-2406c0de25c5407cdeb3dcd60053bcd4`
         const result = await fetch(searchURL);
         const parsedResponse = await result.json();
         console.log(searchURL);
